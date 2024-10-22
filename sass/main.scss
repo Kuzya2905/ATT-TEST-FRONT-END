@@ -1,0 +1,476 @@
+@import "./core.scss";
+
+body {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  margin: 0;
+  width: 100%;
+}
+
+.main {
+  width: 100%;
+  background-color: #f5f7fa;
+}
+
+.header {
+  font-family: $font-family;
+  flex-wrap: wrap;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    display: grid;
+    gap: 20px 0;
+    padding: 25px;
+    padding-bottom: 0;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr;
+  }
+}
+
+.headerBurger {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .headerBurger {
+    display: block;
+  }
+}
+
+.closeBurgerImg {
+  display: none;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  z-index: 2;
+  right: 13%;
+}
+
+.headerLeftBlock {
+  display: flex;
+  align-items: center;
+}
+
+.headerRightBlock {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+@media screen and (max-width: 1000px) {
+  .headerRightBlock {
+    justify-content: end;
+  }
+}
+
+.photoAccountMobileScreen {
+  display: none;
+}
+
+.wrapperSearchMobile {
+  background-color: #fff;
+  padding-bottom: 20px;
+}
+
+.searchMobileScreen {
+  display: none;
+}
+
+.searchMobileScreen::placeholder {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 15px;
+  color: #8ba3cb;
+}
+
+@media screen and (max-width: 1000px) {
+  .photoAccountMobileScreen {
+    display: block;
+  }
+  .searchMobileScreen {
+    background-color: #fff;
+    margin: auto;
+    width: 325px;
+    display: block;
+    grid-column: 2;
+    grid-row: 2;
+    border-radius: 40px;
+    height: 50px;
+    border: none;
+    background: #f5f7fa;
+    background-image: url(../images/icon-search.svg);
+    background-repeat: no-repeat;
+    background-position: 25px;
+    padding-left: 60px;
+    padding-right: 25px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 15px;
+  }
+}
+
+.headerNamePage {
+  font-family: $font-family;
+  font-weight: 600;
+  font-size: 28px;
+  color: #343c6a;
+}
+
+@media screen and (max-width: 1000px) {
+  .headerLeftBlock {
+    justify-content: center;
+  }
+}
+
+.headerSearch {
+  border-radius: 40px;
+  width: 255px;
+  height: 50px;
+  border: none;
+  background: #f5f7fa;
+  background-image: url(../images/icon-search.svg);
+  background-repeat: no-repeat;
+  background-position: 25px;
+  padding-left: 60px;
+  padding-right: 25px;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 1000px) {
+  .photoAccountMobileScreen {
+    display: block;
+  }
+
+  .headerSearch {
+    display: none;
+  }
+}
+
+.headerSearch::placeholder {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 15px;
+  color: #8ba3cb;
+}
+
+.headerButton {
+  text-decoration: none;
+  border-radius: 100%;
+  padding: 13px;
+  background-color: #f5f7fa;
+}
+
+@media screen and (max-width: 1000px) {
+  .headerButton {
+    display: none;
+  }
+
+  .headerPhotoAccount {
+    display: none;
+  }
+}
+
+.headerButton:hover {
+  path {
+    fill: #fe5c73;
+  }
+}
+
+.headerPhotoAccount {
+  margin-left: 5px;
+}
+
+.photoAccountImg {
+  width: 60px;
+}
+
+.sectionProfile {
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 37px 30px;
+  margin: 30px 40px;
+}
+
+@media screen and (max-width: 1000px) {
+  .sectionProfile {
+    padding: 22px 20px;
+    margin: 25px;
+  }
+}
+
+.sectionProfileNav {
+  border-bottom: 1px solid #f4f5f7;
+  display: flex;
+  gap: 0 47px;
+}
+
+@media screen and (max-width: 700px) {
+  .sectionProfileNav {
+    border-bottom: 1px solid #f4f5f7;
+    display: flex;
+    gap: 0;
+  }
+}
+
+.profileNavButton {
+  position: relative;
+  text-decoration: none;
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 16px;
+  color: #718ebf;
+  text-align: center;
+  padding: 0 15px;
+}
+
+@media screen and (max-width: 1000px) {
+  .profileNavButton {
+    font-size: 13px;
+  }
+}
+
+.profileNavButtonBorder {
+  height: 9px;
+}
+
+.profileNavButton:hover {
+  color: #1814f3;
+  .profileNavButtonBorder {
+    position: absolute;
+    top: 27px;
+    height: 0px;
+    width: 100%;
+    left: 0px;
+    border: 1.5px solid;
+    border-radius: 10px 10px 0 0;
+    border-color: #1814f3;
+  }
+}
+
+.sectionProfileEdit {
+  display: flex;
+  padding: 55px 0;
+  gap: 53px;
+}
+
+@media screen and (max-width: 700px) {
+  .sectionProfileEdit {
+    flex-wrap: wrap;
+  }
+}
+
+.profileEditPhoto {
+  position: relative;
+  display: flex;
+}
+
+.editPhotoImg {
+  width: 132px;
+  height: 130px;
+}
+
+@media screen and (max-width: 700px) {
+  .editPhotoImg {
+    width: 175px;
+    height: 170px;
+  }
+}
+
+.editPhotoImgBtn {
+  border: none;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  background-color: #1814f3;
+  position: absolute;
+  right: 0;
+  top: 83px;
+}
+
+@media screen and (max-width: 700px) {
+  .editPhotoImgBtn {
+    width: 38px;
+    height: 38px;
+    right: 0;
+    top: 100px;
+  }
+}
+
+.profileEditInputs {
+  display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
+  gap: 22px 29px;
+  max-width: 870px;
+}
+
+.profileInputLabel {
+  max-width: 418px;
+  width: 100%;
+
+  display: flex;
+  gap: 11px 0;
+  flex-direction: column;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 16px;
+  color: #232323;
+}
+
+@media screen and (max-width: 1438px) {
+  .profileEditInputs {
+    max-width: 418px;
+    justify-content: center;
+  }
+  .sectionProfileEdit {
+    justify-content: center;
+  }
+}
+
+.profileInput {
+  padding: 15px 20px;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 15px;
+  border: 1px solid #dfeaf2;
+  border-radius: 15px;
+}
+
+.editInputsButton {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+  border-radius: 15px;
+  width: 190px;
+  height: 50px;
+  background: #1814f3;
+  border: none;
+}
+
+.profileInput::placeholder {
+  color: #718ebf;
+}
+
+.profileSelect {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 418px;
+  width: 100%;
+  position: relative;
+
+  select {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 15px;
+    color: #718ebf;
+    padding: 16px 20px;
+    border: 1px solid #dfeaf2;
+    border-radius: 15px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-right: 30px;
+    width: 100%;
+  }
+
+  &::after {
+    content: url(../images/vector.svg);
+    position: absolute;
+    right: 20px;
+    top: 70%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+}
+
+.aside {
+  position: relative;
+  min-width: 204px;
+  height: 100vh;
+  padding-left: 44px;
+  padding-top: 33px;
+  padding-bottom: 20px;
+  border-right: 1px solid #e6eff5;
+}
+
+@media screen and (max-width: 1000px) {
+  .aside {
+    display: none;
+  }
+  .aside.active {
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+  }
+}
+
+.asideLogo {
+  cursor: pointer;
+  text-decoration: none;
+  font-family: $second-family;
+  font-weight: 900;
+  font-size: 25px;
+  color: #343c6a;
+  -webkit-text-stroke: 1px #000000;
+  margin-bottom: 62px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.asideNav {
+  display: flex;
+  flex-direction: column;
+  gap: 39px 0;
+}
+
+.asideNavButton {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 18px;
+  color: #b1b1b1;
+}
+
+.asideNavButton:hover {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 18px;
+  color: #1814f3;
+  .asideNavButtonIcon {
+    path {
+      fill: #1814f3;
+    }
+  }
+  .navButtonBorder {
+    position: absolute;
+    height: 48px;
+    border: 6px solid;
+    left: -57px;
+    border-radius: 0 10px 10px 0;
+    border-color: #1814f3;
+  }
+}
