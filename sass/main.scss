@@ -402,7 +402,6 @@ body {
 .aside {
   position: relative;
   min-width: 204px;
-  height: 100vh;
   padding-left: 44px;
   padding-top: 33px;
   padding-bottom: 20px;
@@ -439,6 +438,19 @@ body {
   display: flex;
   flex-direction: column;
   gap: 39px 0;
+}
+
+.navButtonsMobileScreen {
+  display: none;
+  gap: 20px;
+}
+
+.navBtnMobileScreen {
+  text-decoration: none;
+  svg {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .asideNavButton {
